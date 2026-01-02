@@ -1,5 +1,6 @@
 {
-  "name": "PC Network",
+  "name": "HA Network",
+  "domains": ["ha_network"],
   "content_in_root": false,
-  "domains": ["pc_network"]
+  "render_readme": true
 }
