@@ -1,8 +1,8 @@
-# PC Network
+# HA Network
 
 A custom Home Assistant integration to control and monitor PCs on your local network.
 
-**PC Network** provides:
+**HA Network** provides:
 - Wake-on-LAN functionality via a button entity
 - Online/offline status via ICMP ping
 - UI-based configuration (Config Flow)
@@ -35,16 +35,16 @@ A custom Home Assistant integration to control and monitor PCs on your local net
 1. Open **HACS**
 2. Go to **Integrations**
 3. Click **⋮ → Custom repositories**
-4. Add this repository: https://github.com/G3tG33ky/HA_Network
+4. Add this repository: https://github.com/G3tG33ky/ha_network
 5. Select **Integration**
-6. Install **PC Network**
+6. Install **HA Network**
 7. Restart Home Assistant
 
 ---
 
 ### Option 2: Manual Installation
 
-1. Copy the `pc_network` folder into: config/custom_components/
+1. Copy the `ha_network` folder into: config/custom_components/
 2. Restart Home Assistant
 
 ---
@@ -55,7 +55,7 @@ Configuration is done entirely via the Home Assistant UI.
 
 1. Go to **Settings → Devices & Services**
 2. Click **Add Integration**
-3. Search for **PC Network**
+3. Search for **HA Network**
 4. Enter:
 - **Name** – Display name of the PC
 - **IP Address** – Local IP address of the PC
