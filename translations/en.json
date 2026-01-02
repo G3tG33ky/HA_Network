@@ -1,0 +1,15 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add PC",
+        "description": "Configure a PC for Wake-on-LAN and online status",
+        "data": {
+          "name": "Name",
+          "ip_address": "IP Address",
+          "mac_address": "MAC Address"
+        }
+      }
+    }
+  }
+}
