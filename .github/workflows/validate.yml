@@ -1,19 +1,24 @@
-# name: Validate
+name: Validate
 
-# on:
-#   push:
-#   pull_request:
+on:
+  push:
+  pull_request:
 
-# jobs:
-#   validate:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v4
+jobs:
+  hacs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-#       - name: HACS validation
-#         uses: hacs/action@main
-#         with:
-#           category: integration
+      - name: HACS validation
+        uses: hacs/action@main
+        with:
+          category: integration
 
-#       - name: Home Assistant validation
-#         uses: home-assistant/actions/helpers/validate@master
+  hassfest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Hassfest validation
+        uses: home-assistant/actions/hassfest@master
