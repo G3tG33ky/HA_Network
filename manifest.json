@@ -2,6 +2,7 @@
   "domain": "ha_network",
   "name": "HA Network",
   "version": "1.0.0",
+  "config_flow": true,
   "documentation": "https://github.com/G3tG33ky/HA_Network",
   "issue_tracker": "https://github.com/G3tG33ky/HA_Network/issues",
   "codeowners": ["@G3tG33ky"],

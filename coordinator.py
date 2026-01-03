@@ -1,10 +1,14 @@
 import asyncio
+import logging
 from datetime import timedelta
 
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from homeassistant.core import HomeAssistant
 
 from .const import DEFAULT_SCAN_INTERVAL
+
+_LOGGER = logging.getLogger(__name__)
+
 
 async def async_ping(host: str) -> bool:
     proc = await asyncio.create_subprocess_exec(
@@ -15,15 +19,16 @@ async def async_ping(host: str) -> bool:
     await proc.communicate()
     return proc.returncode == 0
 
-class PcNetworkCoordinator(DataUpdateCoordinator):
+
+class HaNetworkCoordinator(DataUpdateCoordinator[bool]):
     def __init__(self, hass: HomeAssistant, ip: str):
         super().__init__(
             hass,
-            logger=None,
-            name="PC Network Coordinator",
+            logger=_LOGGER,  # ✅ NIEMALS None
+            name="HA Network Coordinator",
             update_interval=timedelta(seconds=DEFAULT_SCAN_INTERVAL),
         )
         self.ip = ip
 
-    async def _async_update_data(self):
+    async def _async_update_data(self) -> bool:
         return await async_ping(self.ip)
