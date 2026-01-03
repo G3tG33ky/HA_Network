@@ -1,0 +1,11 @@
+{
+  "domain": "ha_network",
+  "name": "HA Network",
+  "config_flow": true,
+  "documentation": "https://github.com/pau-git/ha-network",
+  "issue_tracker": "https://github.com/pau-git/ha-network/issues",
+  "requirements": [],
+  "version": "1.0.0",
+  "codeowners": ["@pau-git"],
+  "iot_class": "local_polling"
+}
