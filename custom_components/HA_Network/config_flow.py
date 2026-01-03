@@ -5,6 +5,8 @@ from .const import DOMAIN, CONF_NAME, CONF_IP, CONF_MAC
 
 
 class HaNetworkConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+    """Config flow for HA Network."""
+    
     VERSION = 1
 
     async def async_step_user(self, user_input=None):
@@ -14,11 +16,15 @@ class HaNetworkConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 data=user_input,
             )
 
-        return self.async_show_form(
-            step_id="user",
-            data_schema=vol.Schema({
+        schema = vol.Schema(
+            {
                 vol.Required(CONF_NAME): str,
                 vol.Required(CONF_IP): str,
                 vol.Required(CONF_MAC): str,
-            }),
+            }
+        )
+
+        return self.async_show_form(
+            step_id="user",
+            data_schema=schema,
         )

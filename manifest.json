@@ -1,5 +1,5 @@
 {
-  "domain": "HA_Network",
+  "domain": "ha_network",
   "name": "HA Network",
   "version": "1.0.0",
   "config_flow": true,
