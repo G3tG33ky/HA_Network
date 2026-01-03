@@ -201,6 +201,7 @@ Check if Wake-on-LAN is enabled:
 
 ```bash
 ethtool eth0
+```
 
 ---
 
