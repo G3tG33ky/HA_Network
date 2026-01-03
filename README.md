@@ -215,7 +215,9 @@ Please follow Home Assistant development guidelines and open a pull request.
 ## License
 
 MIT License
+Copyright (c) 2026 Julian Bludau
 
+Permission is hereby granted, free of charge, to any person obtaining a copy
 ---
 
 ## Disclaimer
