@@ -1,5 +1,6 @@
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
+from .sensor import PcNetworkInfoSensor
 
 from .const import DOMAIN
 from .coordinator import HaNetworkCoordinator
