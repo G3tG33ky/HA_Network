@@ -1,6 +1,4 @@
 {
   "name": "HA Network",
-  "domains": ["HA_Network"],
-  "content_in_root": false,
   "render_readme": true
 }
