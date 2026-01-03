@@ -1,10 +1,10 @@
-DOMAIN = "ha_network"
+DOMAIN = "HA_Network"
 
 CONF_NAME = "name"
 CONF_IP = "ip_address"
 CONF_MAC = "mac_address"
 
-MANUFACTURER = "PC Network"
-MODEL = "Network PC"
+MANUFACTURER = "HA Network"
+MODEL = "Network HA"
 
 DEFAULT_SCAN_INTERVAL = 30
