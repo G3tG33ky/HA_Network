@@ -1,4 +1,4 @@
-DOMAIN = "HA_Network"
+DOMAIN = "ha_network"
 
 CONF_NAME = "name"
 CONF_IP = "ip_address"
