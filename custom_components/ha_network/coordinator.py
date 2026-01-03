@@ -30,5 +30,13 @@ class HaNetworkCoordinator(DataUpdateCoordinator[bool]):
         )
         self.ip = ip
 
-    async def _async_update_data(self) -> bool:
-        return await async_ping(self.ip)
+    async def _async_update_data(self):
+        online = await self._ping()
+
+        if online:
+            self.last_seen = datetime.now(timezone.utc)
+
+        return {
+            "online": online,
+            "last_seen": self.last_seen,
+        }

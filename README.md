@@ -78,6 +78,12 @@ For each configured PC, the integration creates:
 - `on` → PC is reachable via ping  
 - `off` → PC is offline or unreachable
 
+### Last Seen
+
+The integration tracks the last time a PC was detected as online.
+The timestamp is exposed as an attribute on the online status sensor and
+is only updated when the device responds successfully.
+
 ---
 
 ## Requirements

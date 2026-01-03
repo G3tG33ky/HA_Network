@@ -27,3 +27,15 @@ class PcOnlineSensor(CoordinatorEntity, BinarySensorEntity):
     @property
     def is_on(self):
         return self.coordinator.data
+    
+    @property
+    def extra_state_attributes(self):
+        last_seen = self.coordinator.data.get("last_seen")
+
+        if not last_seen:
+            return {"last_seen": None}
+
+        return {
+            "last_seen": last_seen.isoformat(),
+            "last_seen_local": as_local(last_seen).strftime("%Y-%m-%d %H:%M:%S"),
+        }
