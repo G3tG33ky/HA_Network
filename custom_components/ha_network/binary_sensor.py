@@ -4,9 +4,11 @@ from homeassistant.util.dt import as_local
 
 from .const import DOMAIN, MANUFACTURER, MODEL
 
+
 async def async_setup_entry(hass, entry, async_add_entities):
     coordinator = hass.data[DOMAIN][entry.entry_id]["coordinator"]
     async_add_entities([PcOnlineSensor(entry, coordinator)])
+
 
 class PcOnlineSensor(CoordinatorEntity, BinarySensorEntity):
     def __init__(self, entry, coordinator):
@@ -27,8 +29,8 @@ class PcOnlineSensor(CoordinatorEntity, BinarySensorEntity):
 
     @property
     def is_on(self):
-        return self.coordinator.data
-    
+        return self.coordinator.data.get("online", False)
+
     @property
     def extra_state_attributes(self):
         last_seen = self.coordinator.data.get("last_seen")

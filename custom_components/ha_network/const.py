@@ -7,4 +7,4 @@ CONF_MAC = "mac_address"
 MANUFACTURER = "HA Network"
 MODEL = "Network HA"
 
-DEFAULT_SCAN_INTERVAL = 30
+DEFAULT_SCAN_INTERVAL = 30  # in seconds
